@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:elm_bloc/src/events.dart';
+import 'event.dart';
 
 class EventStream<T> {
   final _streamController = StreamController<Event<T>>();
