@@ -72,7 +72,7 @@ abstract class ModelProvider<T> extends StatefulWidget {
     _outEvents.dispose();
   }
 
-  Widget view({Key? key}) {
+  Widget _view({Key? key}) {
     return StreamBuilder<T>(
       key: key,
       stream: _stateStream.stream,
@@ -87,10 +87,15 @@ abstract class ModelProvider<T> extends StatefulWidget {
   }
 
   @override
-  State<ModelProvider<T>> createState() => _ModelProviderState<T>();
+  // ignore: no_logic_in_create_state
+  State<ModelProvider<T>> createState() => _ModelProviderState<T>(_view);
 }
 
 class _ModelProviderState<T> extends State<ModelProvider<T>> {
+  Function({Key? key}) view;
+
+  _ModelProviderState(this.view);
+
   @override
   void dispose() {
     widget.dispose();
@@ -99,6 +104,6 @@ class _ModelProviderState<T> extends State<ModelProvider<T>> {
 
   @override
   Widget build(BuildContext context) {
-    return widget.view();
+    return view();
   }
 }
