@@ -12,9 +12,4 @@ abstract class Event<T> {
   );
 }
 
-class UpdateView<T> implements Event<T> {
-  @override
-  void updateModel(_, ___, ____) => {};
-}
-
 abstract class OutEvent<T> {}

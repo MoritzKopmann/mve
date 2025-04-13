@@ -1,5 +1,5 @@
-name: mve
-description: "A state management concept using the Model, View, Event architecture"
+name: mvu
+description: "A state management concept using the Model, View, Update architecture inspired by 'The Elm Architcure'"
 version: 1.0.0
 homepage:
 

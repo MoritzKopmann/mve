@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'event.dart';
+import 'package:mvu/src/event.dart';
 
 /// Defines an interface for building state-based widgets.
 ///
