@@ -11,7 +11,7 @@ import 'package:mvu/src/state_view.dart';
 /// Integrates with [EventHandler] for event handling to update the model's state.
 /// This controller facilitates the triggering of events and the construction of views
 /// that reflect the current state of the model.
-abstract class ModelProvider<T> extends StatefulWidget {
+class ModelProvider<T> extends StatefulWidget {
   final T _state;
 
   final StateView<T> _stateView;
